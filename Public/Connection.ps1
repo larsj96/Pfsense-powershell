@@ -75,14 +75,5 @@ function connect-pfsense {
     }
 }
 
-connect-pfsense
+connect-pfsense -SkipCertificateCheck
 
-function get-pfsenseinterfacevlan {
-
-
-
-
-    $data = invoke-restmethod "$($pfsenseconnection.server)api/v1/interface/vlan"  -Headers $pfsenseconnection.headers  -method "get"
-    $data.data
-
-}
