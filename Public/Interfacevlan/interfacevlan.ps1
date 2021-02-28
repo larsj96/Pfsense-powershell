@@ -91,7 +91,6 @@ Set the VLAN tag to add to the parent interface
 .PARAMETER pcp
 Set a 802.1Q VLAN priority. Must be an integer value between 0 and 7 (optional)
 
-
 .PARAMETER descr
 Set a description for the new VLAN interface
 
@@ -144,4 +143,3 @@ Set a description for the new VLAN interface
     }
 
 }
-

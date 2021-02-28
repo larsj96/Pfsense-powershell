@@ -75,5 +75,5 @@ function connect-pfsense {
     }
 }
 
-connect-pfsense -SkipCertificateCheck
+connect-pfsense
 

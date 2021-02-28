@@ -1,9 +1,8 @@
 
-$data = import-csv  C:\Scripts\updateinterface.csv
+$data = import-csv  C:\Scripts\pfsense-powershell\temp\updatefirewallrule.csv
 
 $data | ForEach-Object {
 
-    # Create interface
     $PARAMETERTOPTEXT = "
 .PARAMETER $($_.key)
 $($_.Description)

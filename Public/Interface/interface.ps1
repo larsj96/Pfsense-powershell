@@ -1,4 +1,4 @@
-function Add-PfsenseInterface {
+function New-PfsenseInterface {
     <#
 .PARAMETER if
 Specify the physical interface to configure
@@ -271,11 +271,9 @@ later. Typically, if you are creating multiple interfaces at once it Is best to 
         write-verbose $jsonpayload
         invoke-restmethod "$($pfsenseconnection.server)api/v1/interface/"  -Headers $pfsenseconnection.headers -body $jsonpayload -method "POST"
 
-
-
     }
 }
-function update-PfsenseInterface {
+function Update-PfsenseInterface {
     <#
 .PARAMETER id
 Specify the Interface to update. You may specify either the interface’s descriptive name, the pfSense ID (wan, lan, optx), or the physical interface id (e.g. igb0)
