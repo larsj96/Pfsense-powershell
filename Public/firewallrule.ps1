@@ -66,7 +66,6 @@ New-PfsenseFirewallRule -type "block" -interface "WAN" -protocol "tcp/udp" -src 
 
 #>
 
-
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true,
