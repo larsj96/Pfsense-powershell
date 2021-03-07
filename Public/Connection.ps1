@@ -75,5 +75,3 @@ function connect-pfsense {
     }
 }
 
-connect-pfsense
-
