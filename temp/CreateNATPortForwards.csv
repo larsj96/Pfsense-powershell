@@ -1,0 +1,14 @@
+﻿Key,Description
+interface,"Set which interface the rule will apply to. You may specify either the interface's descriptive name, the pfSense ID (wan, lan, optx), or the physical interface id (e.g. igb0). Floating rules are not supported."
+protocol,"Set which transfer protocol the rule will apply to. If tcp, udp, tcp/udp, you must define a source and destination port"
+src,"Set the source address of the firewall rule. This may be a single IP, network CIDR, alias name, or interface. When specifying an interface, you may use the physical interface ID, the descriptive interface name, or the pfSense ID. To use only interface address, add ip to the end of the interface name otherwise the entire interface's subnet is implied. To negate the context of the source address, you may prepend the address with !"
+dst,"Set the destination address of the firewall rule. This may be a single IP, network CIDR, alias name, or interface. When specifying an interface, you may use the physical interface ID, the descriptive interface name, or the pfSense ID. To only use interface address, add ip to the end of the interface name otherwise the entire interface's subnet is implied. To negate the context of the source address, you may prepend the address with !"
+srcport,"Set the TCP and/or UDP source port of the firewall rule. This is only necessary if you have specified the protocol to tcp, udp, tcp/udp"
+dstport,"Set the TCP and/or UDP destination port of the firewall rule. This is only necessary if you have specified the protocol to tcp, udp, tcp/udp"
+target,Specify the IP to forward traffic to
+local-port,"Set the TCP and/or UDP port to forward traffic to. This is only necessary if you have specified the protocol to tcp, udp, tcp/udp. Port ranges may be specified using colon or hyphen."
+natreflection,Set the NAT reflection mode explicitly (optional)
+descr,Set a description for the rule (optional)
+disabled,Disable the rule upon creation (optional)
+top,Add this port forward rule to top of access control list (optional)
+apply,"Specify whether or not you would like this port forward to be applied immediately, or simply written to the configuration to be applied later. Typically, if you are creating multiple port forwards at once it Is best to set this to false and apply the changes afterwards using the /api/v1/firewall/apply endpoint. Otherwise, If you are only creating a single port forward, you may set this true to apply it immediately. Defaults to false. (optional)"

@@ -1,0 +1,15 @@
+﻿Key,Description
+Id,Specify the ID of the port forward rule to update.
+interface,"Update the interface the rule will apply to. You may specify either the interface's descriptive name, the pfSense ID (wan, lan, optx), or the physical interface id (e.g. igb0). Floating rules are not supported. (optional)"
+protocol,"Update which transfer protocol the rule will apply to. If tcp, udp, tcp/udp, you must define a source and destination port. (optional)"
+src,"Update the source address of the firewall rule. This may be a single IP, network CIDR, alias name, or interface. When specifying an interface, you may use the physical interface ID, the descriptive interface name, or the pfSense ID. To use only interface address, add ip to the end of the interface name otherwise the entire interface's subnet is implied. To negate the context of the source address, you may prepend the address with ! (optional)"
+dst,"Update the destination address of the firewall rule. This may be a single IP, network CIDR, alias name, or interface. When specifying an interface, you may use the physical interface ID, the descriptive interface name, or the pfSense ID. To only use interface address, add ip to the end of the interface name otherwise the entire interface's subnet is implied. To negate the context of the source address, you may prepend the address with ! (optional)"
+srcport,"Update the TCP and/or UDP source port of the firewall rule. This is only necessary if you have specified the protocol to tcp, udp, tcp/udp (optional)"
+dstport,"Update the TCP and/or UDP destination port of the firewall rule. This is only necessary if you have specified the protocol to tcp, udp, tcp/udp (optional)"
+target,Update the IP to forward traffic to (optional)
+local-port,"Update the TCP and/or UDP port to forward traffic to. This is only necessary if you have specified the protocol to tcp, udp, tcp/udp. Port ranges may be specified using colon or hyphen. (optional)"
+natreflection,Update the NAT reflection mode explicitly (optional)
+descr,Update a description for the rule (optional)
+disabled,"Enable or disable the rule upon creation. True to disable, false to enable (optional)"
+top,Move this port forward rule to top of access control list (optional)
+apply,"Specify whether or not you would like this port forward update to be applied immediately, or simply written to the configuration to be applied later. Typically, if you are updating multiple port forwards at once it Is best to set this to false and apply the changes afterwards using the /api/v1/firewall/apply endpoint. Otherwise, If you are only updating a single port forward, you may set this true to apply it immediately. Defaults to false. (optional)"
